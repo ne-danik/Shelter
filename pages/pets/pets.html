@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie-edge">
+      <title>Shelter</title>
+      <link rel="stylesheet" href="../pets/pets.css" />
+
+  </head>
+  <body>
+
+    <header>
+      <div class="wrapper_header">
+        <div class="header">
+
+          <div class="logo">
+            <h1 class="logo__title"><a href="../main/main.html">Cozy House</a></h1>
+            <span class="logo__subtitle">Shelter for pets in Boston</span>
+          </div>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list__item"><a href="../main/main.html">About the shelter</a></li>
+              <li class="menu__list__item"><a href="#" class="active">Our pets</a></li>
+              <li class="menu__list__item">Help the shelter</li>
+              <li class="menu__list__item">Contacts</li>
+            </ul>
+          </nav>
+          
+          <input id="burgerBtn" class="burger_menu__btn" type="checkbox" />
+            <label class="burger_menu__btn__icon" for="burgerBtn" title="Open menu">
+              <span></span>
+            </label>
+            
+          <div class="burger_menu">
+            <div class="logo">
+              <h1 class="logo__title">Cozy House</h1>
+              <span class="logo__subtitle">Shelter for pets in Boston</span>
+            </div>
+            <ul class="burger_menu__list">
+              <li class="burger_menu__list__item"><a href="../main/main.html">About the shelter</a></li>
+              <li class="burger_menu__list__item"><a href="#" class="active" id="active">Our pets</a></li>
+              <li class="burger_menu__list__item">Help the shelter</li>
+              <li class="burger_menu__list__item">Contacts</li>  
+            </ul>
+          </div>
+          <div class="overlay"></div>
+
+        </div>
+      </div>
+    </header>
+
+    
+    <div id="popup" class="popup">
+      <div class="popup__container">
+        <img src="" class="popup__container__image" id="img">
+        <div class="popup__container__content">
+          <h3 class="popup__container__content__title"><span id="name"></span></h3>
+          <h4 class="popup__container__content__subtitle"><span id="type"></span> - <span id="breed"></span></h4>
+          <p class="popup__container__content__description"><span id="description"></span></p>
+          <ul class="popup__container__content__list" id="characteristics">
+            <li class="popup__container__content__list__item">
+              <strong>Age: </strong>
+              <span id="age"></span>
+            </li>
+            <li class="popup__container__content__list__item">
+              <strong>Inoculations: </strong>
+              <span id="inoculations"></span>
+            </li>
+            <li class="popup__container__content__list__item">
+              <strong>Diseases: </strong>
+              <span id="diseases"></span>
+            </li>
+            <li class="popup__container__content__list__item">
+              <strong>Parasites: </strong>
+              <span id="parasites"></span>
+            </li>
+          </ul>
+        </div>
+        <button type="button" id="close" class="button button_round close" title="Close"></button>
+      </div>
+    </div>
+
+
+    <section class="pets_section">
+      <div class="wrapper pets_container">
+
+        <h3 class="pets_container__title">
+          <span>Our friends who</span>
+          <span>are looking for a house</span>
+        </h3>
+
+        <div class="pets_container__cards">
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-5">
+            <img src="../../assets/images/katrine.png" alt="Katrine">
+            <h4 class="pets_container__cards__card__title">Katrine</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-1">
+            <img src="../../assets/images/jennifer.png" alt="Jennifer">
+            <h4 class="pets_container__cards__card__title">Jennifer</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-3">
+            <img src="../../assets/images/woody.png" alt="Woody">
+            <h4 class="pets_container__cards__card__title">Woody</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-2">
+            <img src="../../assets/images/sophia.png" alt="Sophia">
+            <h4 class="pets_container__cards__card__title">Sophia</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-6">
+            <img src="../../assets/images/timmy.png" alt="Timmy">
+            <h4 class="pets_container__cards__card__title">Timmy</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-8">
+            <img src="../../assets/images/charly.png" alt="Charly">
+            <h4 class="pets_container__cards__card__title">Charly</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+          
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-4">
+            <img src="../../assets/images/scarlett.png" alt="Scarlett">
+            <h4 class="pets_container__cards__card__title">Scarlett</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+
+          <div class="pets_container__cards__card" onclick="openPopup(this)" id="slide-7">
+            <img src="../../assets/images/freddie.png" alt="Freddie">
+            <h4 class="pets_container__cards__card__title">Freddie</h4>
+            <button type="submit" class="button button_secondary" title="Learn more">Learn more</button>
+          </div>
+        </div>
+
+        <div class="pets_container__paginator">
+          <button type="submit" class="button button_round" title="Start" disabled>&lt;&lt;</button>
+          <button type="submit" class="button button_round" title="Prev" disabled>&lt;</button>
+          <button type="submit" class="button button_round active" title="1">1</button>
+          <button type="submit" class="button button_round" title="Next">&gt;</button>
+          <button type="submit" class="button button_round" title="End">&gt;&gt;</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="wrapper_background">
+        <div class="wrapper footer_container">
+          
+          <div class="footer_container__content contacts">
+            <h3 class="footer_container__content__title">For questions and suggestions</h3>
+
+            <div class="footer_container__content__item">
+              <a href="mailto:email@shelter.com">
+                <span class="icon_mail"></span>
+                <span>email@shelter.com</span>
+              </a>
+            </div>
+
+            <div class="footer_container__content__item">
+              <a href="tel:136745677554">
+                <span class="icon_phone"></span>
+                <span>+13 674 567 75 54</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer_container__content location">
+            <h3 class="footer_container__content__title">We are waiting for your visit</h3>
+
+            <div class="footer_container__content__item">
+              <a href="https://goo.gl/maps/Q6hBvrgChJTBbDmq6" target="_blank">
+                <span class="icon_location"></span>
+                <span>1 Central Street, Boston (entrance from the store)</span>
+              </a>
+            </div>
+
+            <div class="footer_container__content__item">
+              <a href="https://goo.gl/maps/byva2KCBgcPukixeA" target="_blank">
+                <span class="icon_location"></span>
+                <span>18 South Park, London</span>
+              </a>
+            </div>
+          </div>
+
+          <img class="footer_container__image" src="../../assets/images/footer-puppy.png" alt="Footer puppy" />
+
+        </div>
+      </div>
+    </footer>
+
+    <script src="pets.json"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
